@@ -1,20 +1,41 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { useFonts, Montserrat_700Bold } from "@expo-google-fonts/montserrat";
+import store from './src/services/redux/store'
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Provider } from 'react-redux';
+import { Login } from './src/pages/Login/Login';
+import { SinglePage } from './src/pages/SinglePage';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
+  let [fontsLoaded, fontError] = useFonts({
+    Montserrat_700Bold,
+  });
+
+  if (!fontsLoaded && !fontError) {
+    return null;
+  }
+  
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName='Login'>
+          <Stack.Screen
+          name='Login'
+          component={Login}
+          options={{headerShown: false}}
+          />
+          <Stack.Screen
+          name='SinglePage'
+          component={SinglePage}
+          options={{headerShown: false}}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
