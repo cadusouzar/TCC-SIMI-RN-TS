@@ -4,8 +4,9 @@ import store from './src/services/redux/store'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Provider } from 'react-redux';
-import { Login } from './src/pages/Login/Login';
-import { SinglePage } from './src/pages/SinglePage';
+import { Login } from './src/pages';
+import { SinglePage } from './src/pages';
+import { Registro } from './src/pages';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +31,11 @@ export default function App() {
           <Stack.Screen
           name='SinglePage'
           component={SinglePage}
+          options={{headerShown: false}}
+          />
+          <Stack.Screen
+          name='Registro'
+          component={Registro}
           options={{headerShown: false}}
           />
         </Stack.Navigator>

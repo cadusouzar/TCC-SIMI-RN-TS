@@ -19,23 +19,20 @@ export const Login = () => {
       alert("Login e Senha não coincidem");
       return;
     }
-    // const url = `/Usuario/Login?cpf=${login}&senha=${password}`;
-    // await api.get(url)
-    //   .then((resp) => {
-    //     if(resp.data){
-    //     dispatch(setUserData(resp.data)); 
-    //     //@ts-ignore
-    //     navigation.navigate('SinglePage');
-    //     setLogin('')
-    //     setPassword('')
-    //     }else{
-    //       alert("Login e Senha não coincidem");
-    //     }
-    //   })
-    //   .catch((err) => console.log(err));
-
-    //@ts-ignore
-    navigation.navigate('SinglePage');
+    const url = `/Usuario/Validar?login=${login}&senha=${password}`;
+    await api.post(url)
+      .then((resp) => {
+        if(resp.data){
+        dispatch(setUserData(resp.data)); 
+        //@ts-ignore
+        navigation.navigate('SinglePage');
+        setLogin('')
+        setPassword('')
+        }else{
+          alert("Login e Senha não coincidem");
+        }
+      })
+      .catch((err) => alert(err.response.data));
   };
 
   const goRegister = () => {

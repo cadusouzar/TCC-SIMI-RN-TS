@@ -1,5 +1,5 @@
 import React from "react"
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, Linking } from 'react-native'
 import styles from "./styles"
 import { Texts } from "../../data"
 //@ts-ignore
@@ -10,6 +10,12 @@ import { ButtonOpacity } from "../../objects/ButtonOpacity"
 
 export const BemVindo = () => {
   const userData = useSelector((state: RootState) => state.auth.userData)
+  const numeroBombeiros = '193';
+
+  const fazerLigacao = () => {
+      const numeroTelefone = `tel:${numeroBombeiros}`;
+      Linking.openURL(numeroTelefone);
+  };
 
   function nomeFormatado(nome:string) {
     if(nome){
@@ -40,7 +46,7 @@ export const BemVindo = () => {
         <Image style={styles.image} source={simiLogo} />
       </View>
       <View style={styles.containerButton}>
-        <ButtonOpacity txtButton="Ligar para os bombeiros" handlePress={() => {}} width={280} fontSize={18}/>
+        <ButtonOpacity txtButton="Ligar para os bombeiros" handlePress={fazerLigacao} width={280} fontSize={18}/>
       </View>
     </View>
   )

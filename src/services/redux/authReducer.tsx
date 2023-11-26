@@ -22,11 +22,6 @@ export const authReducer = (state = initialState, action: GenericAction<string>)
         ...state,
         userData: null,
       };
-      case 'SET_LOCALIZACAO_CONTATO_DATA':
-        return{
-          ...state,
-          localizacaoContatoData: action.payload,
-        }
     default:
       return state;
   }

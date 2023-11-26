@@ -31,13 +31,12 @@ export const LottieFile: React.FC<PropsLottieFile> = ({ variant, width, height})
 
   return (
     <LottieView
-      autoPlay
+      autoPlay = {true}
       style={{
         width: width,
         height: height,
       }}
       source={lottieSource}
-      loop={true}
     />
   );
 };

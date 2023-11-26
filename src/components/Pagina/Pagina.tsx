@@ -6,6 +6,7 @@ import styles from './styles'
 //@ts-ignore
 import Menu from '../../images/Menu.png'
 import { Home, Perfil, SensorDeGas, SensorDeChama, Creditos, Dispositivo } from "../../pages";
+import { RotaFuga } from "../../pages";
 
 type PropsPagina = {
   PaginaAtual: string
@@ -78,6 +79,7 @@ export const Pagina: React.FC<PropsPagina> = ({ PaginaAtual }) => {
           PaginaAtual === 'Sensor de chama' ? <SensorDeChama/> :
           PaginaAtual === 'Créditos' ? <Creditos/> :
           PaginaAtual === 'Dispositivo' ? <Dispositivo/> :
+          PaginaAtual === 'Mapa de fuga' ? <RotaFuga/> :
           <></>
         }
       </Animated.View>

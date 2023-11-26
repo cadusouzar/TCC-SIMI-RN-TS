@@ -41,7 +41,7 @@ export const NavBar:React.FC<PropsNavBar> = ({setCurrentTab, currentTab}) => {
         height: 60,
         marginTop: 20
       }} />
-      <View style={{width: '50%'}}>
+      <View style={{width: '50%', marginTop: 10}}>
         <Text style={styles.Text}>{nomeCompleto(userData?.nome)}</Text>
       </View>
 

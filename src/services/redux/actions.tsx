@@ -11,9 +11,3 @@ export const logoutUser = () => {
   };
 };
 
-export const setLocalizacaoContato = (data:object) => {
-  return {
-    type: 'SET_LOCALIZACAO_CONTATO_DATA',
-    payload: data,
-  };
-};
