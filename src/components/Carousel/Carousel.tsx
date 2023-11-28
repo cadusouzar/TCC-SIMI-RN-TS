@@ -4,8 +4,15 @@ import { ScrollView, View } from "react-native";
 
 const imagesCarrossel = [
   { id: 1, imageUrl: require('./1.jpg') },
-  { id: 2, imageUrl: require('./1.jpg') },
-  { id: 3, imageUrl: require('./1.jpg') },
+  { id: 2, imageUrl: require('./2.jpg') },
+  { id: 4, imageUrl: require('./3.jpg') },
+  { id: 5, imageUrl: require('./3.jpg') },
+  { id: 6, imageUrl: require('./3.jpg') },
+  { id: 7, imageUrl: require('./3.jpg') },
+  { id: 8, imageUrl: require('./3.jpg') },
+  { id: 9, imageUrl: require('./3.jpg') },
+  { id: 10, imageUrl: require('./3.jpg') },
+  { id: 11, imageUrl: require('./3.jpg') },
 ];
 
 export const Carousel = () => {

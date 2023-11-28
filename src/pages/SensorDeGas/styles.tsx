@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
   },
   containerLottie:{
     right: 35,
-    top: 30
   },
   textExiste:{
     fontFamily: 'Montserrat_700Bold',
@@ -17,7 +16,7 @@ const styles = StyleSheet.create({
   },
   containerButton:{
     alignItems: 'center',
-    top: 120
+    top: 50
   },
 });
 
