@@ -1,7 +1,7 @@
 import { Text, Image, View, Dimensions, ScrollView } from "react-native";
 import {useEffect, useState} from 'react';
 import { api } from "../../services/api";
-import { ButtonOpacity } from "../../objects";
+import { ButtonOpacity } from "../../objects/ButtonOpacity";
 import { useNavigation } from "@react-navigation/native"; 
 import styles from './styles'
 

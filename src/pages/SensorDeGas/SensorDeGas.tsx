@@ -1,5 +1,6 @@
 import { Text, View } from "react-native"
-import { ButtonOpacity, LottieFile } from "../../objects"
+import { ButtonOpacity } from "../../objects/ButtonOpacity"
+import { LottieFile } from "../../objects/LottieFile"
 import styles from './styles'
 import {useEffect, useState} from 'react';
 import { api } from "../../services/api";

@@ -5,8 +5,13 @@ import { backgroundMenuColor, colorNavTop } from "../../style";
 import styles from './styles'
 //@ts-ignore
 import Menu from '../../images/Menu.png'
-import { Home, Perfil, SensorDeGas, SensorDeChama, Creditos, Dispositivo } from "../../pages";
-import { RotaFuga } from "../../pages";
+import { Home } from "../../pages/Home";
+import { Perfil } from "../../pages/Perfil";
+import { SensorDeGas } from "../../pages/SensorDeGas";
+import { SensorDeChama } from "../../pages/SensorDeChama";
+import { Creditos } from "../../pages/Creditos";
+import { Dispositivo } from "../../pages/Dispositivo";
+import { RotaFuga } from "../../pages/RotaFuga";
 
 type PropsPagina = {
   PaginaAtual: string
@@ -60,9 +65,9 @@ export const Pagina: React.FC<PropsPagina> = ({ PaginaAtual }) => {
           translateY: closeButtonOffset
         }]
       }}>
-        <View style={{backgroundColor:colorNavTop ,borderTopLeftRadius: 15, paddingHorizontal: 20, paddingVertical: 5, paddingBottom: 30}}>
+        <View style={{backgroundColor:colorNavTop ,borderTopLeftRadius: 15, paddingHorizontal: 20, paddingVertical: 5, paddingBottom: 70}}>
           <TouchableOpacity onPress={toggleMenu}>
-            <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', top: 35}}>
               {!showMenu ?
                 <Image source={Menu} style={styles.imageMenu} /> :
                 //@ts-ignore

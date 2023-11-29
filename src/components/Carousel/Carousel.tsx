@@ -1,4 +1,4 @@
-import { CardImage } from "../../objects";
+import { CardImage } from "../../objects/CardImage";
 import React from "react";
 import { ScrollView, View } from "react-native";
 

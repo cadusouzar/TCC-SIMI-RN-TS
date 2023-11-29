@@ -1,5 +1,5 @@
 import { Text, View } from "react-native"
-import { LottieFile } from "../../objects"
+import { LottieFile } from "../../objects/LottieFile"
 import styles from './styles'
 import {useEffect, useState} from 'react';
 import { api } from "../../services/api";

@@ -46,7 +46,7 @@ export const Perfil = () => {
       <View style={styles.Perfil}>
         <Image source={ImagePerfil} style={styles.fotoPerfil} />
         <Text style={styles.nomePerfil}>{nomeFormatado(userData?.nome)}</Text>
-        <Text style={styles.dadosPerfil}>{userData?.cpf && formatCPF(userData?.cpf)}</Text>
+        <Text style={styles.dadosPerfil}>{userData?.login && formatCPF(userData?.login)}</Text>
       </View> 
       <TouchableOpacity style={styles.containerSenha} onPress={TrocarSenha}>
         <Text style={styles.dadosPerfil}>Esqueceu sua senha?</Text>

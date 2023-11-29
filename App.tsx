@@ -4,10 +4,11 @@ import store from './src/services/redux/store'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Provider } from 'react-redux';
-import { Login, Mapa } from './src/pages';
-import { SinglePage } from './src/pages';
-import { Registro } from './src/pages';
-import { Salas } from './src/pages';
+import { Login } from './src/pages/Login';
+import {  Mapa } from './src/pages/Mapa';
+import { SinglePage } from './src/pages/SinglePage';
+import { Registro } from './src/pages/Registro';
+import { Salas } from './src/pages/Salas';
 
 const Stack = createNativeStackNavigator();
 

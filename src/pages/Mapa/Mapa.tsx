@@ -49,7 +49,7 @@ export const Mapa: React.FC = ({ route }: any) => {
               source={salaImages[sala as keyof SalaImages]}
             />
           ) : (
-            <></>
+            <Image style={{ height: 700, width: 380, resizeMode: 'stretch' }} source={require('../../images/mapa1.png')}/>
           )}
         </View>
       </View>

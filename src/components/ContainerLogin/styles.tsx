@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   Image:{
     width: 300,
     height: 250,
-    marginTop: 70,
+    marginTop: 140,
     marginBottom: 80
   },
   ContainerLogin:{

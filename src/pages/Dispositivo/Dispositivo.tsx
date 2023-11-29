@@ -1,5 +1,6 @@
 import { Text, View } from "react-native";
-import { Carousel, Especificacoes } from "../../components";
+import { Carousel } from "../../components/Carousel";
+import { Especificacoes } from "../../components/Especificacoes";
 import { TextsEspecificacoes } from "../../data";
 import styles from './styles'
 export const Dispositivo =() => {

@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { useNavigation } from '@react-navigation/native';
 import { NavBarBarbeiro } from '../../components/NavBarBarbeiro';
-import { ButtonOpacity } from '../../objects';
+import { ButtonOpacity } from '../../objects/ButtonOpacity';
 import { backgroundMenuColor } from '../../style/settings/colors';
 
 export const Salas: React.FC = () => {
